@@ -1,0 +1,11 @@
+name "animated"
+description "Animated Squares Demo"
+authors "Wolfie"
+copyright "Copyright © 2019, Geoffrey (Wolfie) Wolf"
+license "MIT"
+
+targetName "animated.wasm"
+targetPath "../../bootstrap-typescript/webRoot"
+
+dflags "-mtriple=wasm32-unknown-unknown-wasm" "-Oz" "-betterC" "-fvisibility=hidden"
+lflags "-strip-all"

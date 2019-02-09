@@ -1,0 +1,11 @@
+{
+  "name": "animated",
+  "version": "0.0.1",
+  "description": "Animated Squares Demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "dub build --compiler=ldc2 --build=release --force"
+  },
+  "author": "Geoffrey (Wolfie)",
+  "license": "MIT"
+}

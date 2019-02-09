@@ -6,3 +6,5 @@ __dummy.html
 __test__*__
 *.a
 Dockerfile.build
+.idea
+*.iml
