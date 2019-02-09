@@ -4,6 +4,8 @@ authors "Wolfie"
 copyright "Copyright © 2019, Geoffrey (Wolfie) Wolf"
 license "MIT"
 
+dependency "spasm" path="../.."
+
 targetName "animated.wasm"
 targetPath "../../bootstrap-typescript/webRoot"
 
