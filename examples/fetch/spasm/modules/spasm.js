@@ -29,6 +29,9 @@ const spasm = {
     instance: null,
     init: (modules) => {
         let exports = {env: Object.assign.apply(null,modules.map(m=>m.jsExports).filter(a=>!!a))};
+
+        console.log(exports)
+
         WebAssembly.instantiateStreaming(fetch('fetch'), exports)
             .then(obj => {
                 spasm.instance = obj.instance;

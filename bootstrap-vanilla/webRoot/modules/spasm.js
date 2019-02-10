@@ -28,7 +28,10 @@ const spasm = {
     heapf64: new Float64Array(buffer),
     instance: null,
     init: (modules) => {
-        let exports = {env: Object.assign.apply(null,modules.map(m=>m.jsExports).filter(a=>!!a))};
+        let exports = {
+            env: Object.assign.apply(null,modules.map(m=>m.jsExports).filter(a=>!!a))
+        };
+
         WebAssembly.instantiateStreaming(fetch('animated.wasm'), exports)
             .then(obj => {
                 spasm.instance = obj.instance;
@@ -60,6 +63,7 @@ let decoders = {
     }
 }
 let jsExports = {
+    _d_allocmemory: () => { console.log("_d_allocmemory")}, /** TODO @ Wolfie -> What's this for? */
     onOutOfMemoryError: () => abort("Out of memory exception"),
     _d_assert: (file,line) => abort("assert",file,line),
     doLog: arg => console.log(arg),

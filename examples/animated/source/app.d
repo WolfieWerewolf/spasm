@@ -1,10 +1,15 @@
+import spasm.bindings;
+import spasm.dom;
+import spasm.types;
 
-/** Export to JS Side */
-extern(C) export double add(double a, double b) {
-    return a + b;
+void get_shaders(void delegate(string) callback){
+    auto promise = window.fetch(RequestInfo("https://reqres.in/api/users/2"));
+    promise.then(r => r.json).then((data){
+        callback(data.as!(Json).data.avatar.as!string);
+    });
 }
 
-/** Required entry point */
-extern(C) void _start() {
-
+/** Export to JS Side */
+extern (C) export void _start(){
+    get_shaders((data) => console.log(data));
 }

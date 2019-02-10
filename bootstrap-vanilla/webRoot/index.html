@@ -2,36 +2,9 @@
   <head>
       <script type="module">
           import {spasm, modules} from './modules/index';
-          //console.log(spasm)
+
           spasm.spasm.init(modules);
       </script>
-      <!--<script type="text/javascript" src="entry.js"></script>-->
-      <!--<script>-->
-          <!--import * as lib from 'entry';-->
-          <!--console.log(lib.square(11)); // 121-->
-          <!--console.log(lib.diag(4, 3)); // 5-->
-
-          <!--/** TODO@Wolfie -> Replace this with fetch & Streaming */-->
-          <!--const request = new XMLHttpRequest();-->
-          <!--request.open('GET', 'animated.wasm');-->
-          <!--request.responseType = 'arraybuffer';-->
-          <!--request.onload = () => {-->
-              <!--console.log('response received');-->
-              <!--const bytes = request.response;-->
-              <!--const importObject = {};-->
-              <!--WebAssembly.instantiate(bytes, importObject).then(result => {-->
-                  <!--console.log('instantiated');-->
-                  <!--const { exports } = result.instance;-->
-
-                  <!--/** finally, call the add() function implemented in D: */-->
-                  <!--const r = exports.add(42, -2.5);-->
-                  <!--console.log('r = ' + r);-->
-              <!--});-->
-          <!--};-->
-
-          <!--request.send();-->
-          <!--console.log('request sent');-->
-        <!--</script>-->
   </head>
   <body>
     spasm bootstrap-vanilla
