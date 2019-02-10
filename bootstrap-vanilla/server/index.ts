@@ -13,6 +13,7 @@ export class index {
         ".map": "application/json",
         ".html": "text/html",
         ".js": "application/javascript",
+        "": "application/javascript",
         ".ico": "image/x-icon",
         ".glsl": "text/plain",
         ".wasm": "application/wasm"
