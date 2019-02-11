@@ -23,7 +23,10 @@ void get_shaders(void delegate(string) callback){
 }
 
 void init_webgl(string data){
-    console.log("init_webgl");
+
+    auto canvas = document.getElementById("glCanvas");
+    console.log(canvas);
+    //console.log("init_webgl");
 
     //console.log(data);
 
