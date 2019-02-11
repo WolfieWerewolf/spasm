@@ -40,6 +40,7 @@ const spasm = {
     },
     objects,
     addObject: addObject,
+    getObject: getObject
 }
 
 let encoders = {

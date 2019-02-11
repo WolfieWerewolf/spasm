@@ -31,6 +31,7 @@ struct Game {
   int mouseX, mouseY;
   bool running;
   bool finished;
+
   void init(JsHandle canvas, int w, int h) {
     this.canvas = canvas;
     glSetContext(canvas.getContext());
@@ -45,6 +46,7 @@ struct Game {
     document.addEventListenerTyped!"onMousedown"(this);
     document.addEventListenerTyped!"onMouseup"(this);
   }
+
   void loadNextLevel() {
     if (current_level == 3) {
       (*gTerminal).terminal_run_outro();
